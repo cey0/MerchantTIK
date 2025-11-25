@@ -1,23 +1,28 @@
 export default function CardLogin() {
   return (
     <div class="Login-Container">
-      <div class="Login-Card bg-gray-200 rounded-[40px] flex flex-col p-12 px-15 shadow-lg">
-        <h2 class="Login-Title text-[24px] font-semibold">Sign In</h2>
-        <h3 class="Login-Deskripsi mt-5 text-[14px]">
+      <div class="Login-Card bg-[#DCE0D9] rounded-[40px] flex flex-col p-12 px-15 shadow-2xl">
+        <h2 class="Login-Title text-3xl font-semibold">Sign In</h2>
+        <h3 class="Login-Deskripsi mt-5 text-base">
           Silahkan masuk dengan email anda <br />
           untuk mengakses marketplace TIKREX
         </h3>
         <div class="Login-Input mt-5">
-          <div class="username-input flex flex-col bg-blue-200 rounded p-2 mb-2 shadow-md">
-            <input placeholder="Username" type="text" />
-          </div>
-          <div class="username-input flex flex-col bg-blue-200 rounded p-2 shadow-md">
-            <input placeholder="Password" type="text" />
-          </div>
+          <form action="">
+            <div class="email-input text-white flex flex-col bg-[#98C0E7] rounded px-4 py-1 mb-2 shadow-md text-base">
+              <input placeholder="Email" type="text" />
+            </div>
+            <div class="password-input flex text-white flex-col bg-[#98C0E7] rounded px-4 py-1 shadow-md text-base">
+              <input placeholder="Password" type="password" />
+            </div>
+          </form>
         </div>
-
-        <div class="button-login mt-5 flex flex-col justify-center items-center text-center text-white ">
-          <a href="" class="bg-blue-500 w-full rounded-full py-1 hover:bg-blue-700">login</a>
+        <a href="/forgotpassword" class="w-full text-end rounded-full my-2">Lupa password?</a>
+        <div class="button-login mt-1 flex flex-col justify-center items-center text-center text-white ">
+          <a href="" class="bg-[#3683D0] text-base w-full rounded-md py-2 hover:bg-[#1866b4]">Log in</a>
+        </div>
+        <div class="mt-2 text-center text-sm">
+          Belum punya akun? <a href="/register" class="italic hover:underline">Sign Up</a>
         </div>
       </div>
     </div>
