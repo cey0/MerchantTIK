@@ -17,7 +17,7 @@ export default function CardLogin() {
             </div>
           </form>
         </div>
-        <a href="/forgotpassword" class="w-full text-end rounded-full my-2">Lupa password?</a>
+        <a href="/forgot-password" class="w-full text-end rounded-full my-2">Lupa password?</a>
         <div class="button-login mt-1 flex flex-col justify-center items-center text-center text-white ">
           <a href="" class="bg-[#3683D0] text-base w-full rounded-md py-2 hover:bg-[#1866b4]">Log in</a>
         </div>
