@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer class="bg-[rgb(0,68,102)] text-white py-6 rounded-xl mt-20 w-full">
-      <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-7xl px-4">
         <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div class="col-span-2">
             <div class="inline-block bg-[#DCE0D9] rounded-lg px-4 py-2 shadow-sm">

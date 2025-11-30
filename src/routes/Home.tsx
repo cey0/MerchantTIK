@@ -1,12 +1,12 @@
 import { Title } from "@solidjs/meta";
-import SidebarLogin from "~/components/SidebarLogin";
+import Sidebar from "~/components/Sidebar";
 import Footer from "~/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Title>TIK Merchandise - TIKREX</Title>
-      <SidebarLogin />
+      <Sidebar />
 
       <main class="min-h-screen bg-white">
         {/* Hero Section */}
