@@ -1,4 +1,4 @@
-import CardRegister from "~/components/CardRegister";
+import CardLogin from "~/components/auth/CardLogin";
 
 export default function Login() {
   return (
@@ -7,7 +7,8 @@ export default function Login() {
         <img src="/1.svg" alt="TIKREX logo" class="h-20 object-contain" />
       </header>
 
-      <CardRegister />
+      <CardLogin />
     </div>
   );
 }
+ 

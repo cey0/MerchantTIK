@@ -1,6 +1,6 @@
 import { Title } from "@solidjs/meta";
-import SidebarLogin from "~/components/SidebarLogin";
-import Footer from "~/components/Footer";
+import SidebarLogin from "~/components/layout/SidebarLogin";
+import Footer from "~/components/layout/Footer";
 
 export default function Home() {
   return (

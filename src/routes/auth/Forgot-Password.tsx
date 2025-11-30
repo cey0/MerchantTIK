@@ -1,4 +1,4 @@
-import CardForgotPassword from "~/components/CardForgotPassword";
+import CardForgotPassword from "~/components/auth/CardForgotPassword";
 
 export default function Login() {
   return (
