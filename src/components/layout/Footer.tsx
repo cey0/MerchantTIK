@@ -6,12 +6,15 @@ export default function Footer() {
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           {/* Brand Box */}
           <div class="inline-flex items-center gap-3 bg-[#DCE0D9] rounded-lg px-4 py-2 shadow-md w-max">
-            <img src="./3.svg" alt="TIKREX" class="w-12 h-12" />
-            <span class="text-4xl md:text-5xl text-black font-bold font-Gajraj">TIKREX</span>
+            <img src="/3.svg" alt="TIKREX" class="w-12 h-12" />
+            <span class="text-4xl md:text-5xl text-black font-bold font-Gajraj">
+              TIKREX
+            </span>
           </div>
           {/* Description */}
           <p class="text-xl md:text-2xl leading-relaxed max-w-2xl">
-            Merch resmi himpunan TIK — desain eksklusif untuk mahasiswa dan alumni.
+            Merch resmi himpunan TIK — desain eksklusif untuk mahasiswa dan
+            alumni.
           </p>
         </div>
 
@@ -21,9 +24,21 @@ export default function Footer() {
           <div>
             <h3 class="text-2xl font-bold mb-4">Landing Page</h3>
             <ul class="space-y-3 text-xl">
-              <li><a href="#" class="hover:text-gray-200 transition-colors">Home</a></li>
-              <li><a href="#" class="hover:text-gray-200 transition-colors">Banner</a></li>
-              <li><a href="#" class="hover:text-gray-200 transition-colors">Products</a></li>
+              <li>
+                <a href="#" class="hover:text-gray-200 transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-200 transition-colors">
+                  Banner
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-200 transition-colors">
+                  Products
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -31,10 +46,38 @@ export default function Footer() {
           <div>
             <h3 class="text-2xl font-bold mb-4">Items</h3>
             <ul class="space-y-3 text-xl">
-              <li><a href="#workshirt" class="hover:text-gray-200 transition-colors">Workshirt</a></li>
-              <li><a href="#lanyard" class="hover:text-gray-200 transition-colors">Lanyard</a></li>
-              <li><a href="#sticker" class="hover:text-gray-200 transition-colors">Sticker</a></li>
-              <li><a href="#keychain" class="hover:text-gray-200 transition-colors">Gantungan kunci</a></li>
+              <li>
+                <a
+                  href="#workshirt"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Workshirt
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#lanyard"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Lanyard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#sticker"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Sticker
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#keychain"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Gantungan kunci
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -42,11 +85,46 @@ export default function Footer() {
           <div>
             <h3 class="text-2xl font-bold mb-4">Bundling</h3>
             <ul class="space-y-3 text-xl">
-              <li><a href="#bundle-ultimate" class="hover:text-gray-200 transition-colors">Ultimate Tech Squad</a></li>
-              <li><a href="#bundle-engineer" class="hover:text-gray-200 transition-colors">Engineer Supreme</a></li>
-              <li><a href="#bundle-hackmode" class="hover:text-gray-200 transition-colors">Hack Mode</a></li>
-              <li><a href="#bundle-devpack" class="hover:text-gray-200 transition-colors">Dev Pack</a></li>
-              <li><a href="#bundle-starter" class="hover:text-gray-200 transition-colors">Starter Code</a></li>
+              <li>
+                <a
+                  href="#bundle-ultimate"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Ultimate Tech Squad
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#bundle-engineer"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Engineer Supreme
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#bundle-hackmode"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Hack Mode
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#bundle-devpack"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Dev Pack
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#bundle-starter"
+                  class="hover:text-gray-200 transition-colors"
+                >
+                  Starter Code
+                </a>
+              </li>
             </ul>
           </div>
         </div>
