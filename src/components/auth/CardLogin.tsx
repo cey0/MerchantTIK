@@ -1,9 +1,8 @@
-import { createSignal } from "solid-js";
 import { useNavigate } from "@solidjs/router";
+import { isLoggedIn, setIsLoggedIn } from "~/authStore";
 
 export default function CardLogin() {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = createSignal(false);
 
   return (
     <div class="Login-Container">
@@ -31,9 +30,11 @@ export default function CardLogin() {
         </a>
         <div class="button-login mt-1 flex flex-col justify-center items-center text-center text-white ">
           <button
+            class="bg-[#3683D0] rounded p-2 hover:bg-blue-700 cursor-pointer shadow-md w-full"
             onClick={() => {
               setIsLoggedIn(true);
               navigate("/");
+              console.log(isLoggedIn());
             }}
           >
             Log in

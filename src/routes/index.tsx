@@ -1,6 +1,7 @@
 import { Title } from "@solidjs/meta";
 import SidebarLogin from "~/components/layout/SidebarLogin";
 import Footer from "~/components/layout/Footer";
+import HeroSection from "~/components/section/HeroSection";
 
 export default function Home() {
   return (
@@ -10,37 +11,30 @@ export default function Home() {
 
       <main class="min-h-screen bg-white">
         {/* Hero Section */}
-        <div class="min-h-screen w-screen relative flex flex-col items-center justify-center bg-linear-to-b from-white via-[#E4EBF3] to-[#0C507B]">
-          <div class="flex gap-3">
-            <div class="relative">
-              <div class="w-60"><img src="./2.png" alt="TIK-REX" /></div>
-            </div>
-            <div class="text-black flex flex-col">
-              <p class="text-[40px] leading-none font-varela">
-                MERCHANDISE
-              </p>
-              <span class="text-[120px] leading-none font-Gajraj">TIKREX</span>
-            </div>
-          </div>
-        </div>
+        <HeroSection />
 
         {/* Banner Section */}
         <section class="relative flex flex-col items-center bg-[#0C507B] py-10">
           <div class="w-full max-w-6xl px-4">
             <div class="mb-2 ml-5 flex gap-2 text-white items-center">
-              <img src="./instagram_icon.svg" alt="Instagram Icon" class="w-8 h-8" />
+              <img
+                src="/instagram_icon.svg"
+                alt="Instagram Icon"
+                class="w-8 h-8"
+              />
               <span class="font-varela text-2xl">@barnabyx.co</span>
             </div>
           </div>
 
           <div class="relative group mb-8">
-            <img src="./landing.png" alt="Landing Image" />
+            <img src="/landing.png" alt="Landing Image" />
           </div>
 
-          <h3 class="text-[110px] font-black text-center mb-12 tracking-wider" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1)">
-            <span class="text-white font-Gajraj">
-              From TIK, For TIK.
-            </span>
+          <h3
+            class="text-[110px] font-black text-center mb-12 tracking-wider"
+            style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1)"
+          >
+            <span class="text-white font-Gajraj">From TIK, For TIK.</span>
           </h3>
         </section>
         <section class="relative flex flex-col items-center py-10 bg-linear-to-b from-[#0C507B] via-[#E4EBF3] to-white">
@@ -57,7 +51,11 @@ export default function Home() {
                     T-shirt
                   </span>
                   <div class="flex items-center justify-center gap-6">
-                    <img src="./t-shirt.png" alt="T-shirts" class="w-full max-w-md" />
+                    <img
+                      src="/t-shirt.png"
+                      alt="T-shirts"
+                      class="w-full max-w-md"
+                    />
                   </div>
                 </div>
                 <div class="text-center">
@@ -65,7 +63,11 @@ export default function Home() {
                     Workshirt
                   </span>
                   <div class="flex items-center justify-center">
-                    <img src="./workshirt.png" alt="Workshirt" class="w-full max-w-xs" />
+                    <img
+                      src="/workshirt.png"
+                      alt="Workshirt"
+                      class="w-full max-w-xs"
+                    />
                   </div>
                 </div>
               </div>
@@ -84,7 +86,11 @@ export default function Home() {
                     Name Tag
                   </span>
                   <div class="flex items-center justify-center">
-                    <img src="./lanyard.png" alt="Name Tag" class="w-full max-w-xs" />
+                    <img
+                      src="/lanyard.png"
+                      alt="Name Tag"
+                      class="w-full max-w-xs"
+                    />
                   </div>
                 </div>
               </div>
