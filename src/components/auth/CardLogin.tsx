@@ -1,4 +1,10 @@
+import { createSignal } from "solid-js";
+import { useNavigate } from "@solidjs/router";
+
 export default function CardLogin() {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = createSignal(false);
+
   return (
     <div class="Login-Container">
       <div class="Login-Card bg-[#DCE0D9] rounded-[40px] flex flex-col p-12 px-15 shadow-2xl">
@@ -17,12 +23,27 @@ export default function CardLogin() {
             </div>
           </form>
         </div>
-        <a href="/auth/forgot-password" class="w-full text-end rounded-full my-2">Lupa password?</a>
+        <a
+          href="/auth/forgot-password"
+          class="w-full text-end rounded-full my-2"
+        >
+          Lupa password?
+        </a>
         <div class="button-login mt-1 flex flex-col justify-center items-center text-center text-white ">
-          <a href="/home" class="bg-[#3683D0] text-base w-full rounded-md py-2 hover:bg-[#1866b4]">Log in</a>
+          <button
+            onClick={() => {
+              setIsLoggedIn(true);
+              navigate("/");
+            }}
+          >
+            Log in
+          </button>
         </div>
         <div class="mt-2 text-center text-sm">
-          Belum punya akun? <a href="/auth/register" class="italic hover:underline">Sign Up</a>
+          Belum punya akun?{" "}
+          <a href="/auth/register" class="italic hover:underline">
+            Sign Up
+          </a>
         </div>
       </div>
     </div>
