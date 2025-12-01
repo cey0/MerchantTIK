@@ -16,7 +16,7 @@ export default function CardForgotPassword() {
           </form>
         </div>
         <div class="button-forgot-password mt-2 flex flex-col justify-center items-center text-center text-white ">
-          <a href="" class="bg-[#3683D0] text-base w-full rounded-md py-2 hover:bg-[#1866b4]">Tetapkan sebagai Password Baru</a>
+          <a href="/auth/login" class="bg-[#3683D0] text-base w-full rounded-md py-2 hover:bg-[#1866b4]">Tetapkan sebagai Password Baru</a>
         </div>
       </div>
     </div>

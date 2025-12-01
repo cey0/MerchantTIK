@@ -1,6 +1,7 @@
 import { Title } from "@solidjs/meta";
 import Sidebar from "~/components/layout/Sidebar";
 import Footer from "~/components/layout/Footer";
+import { A } from "@solidjs/router";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <div class="min-h-screen w-screen relative flex flex-col items-center justify-center bg-linear-to-b from-white via-[#E4EBF3] to-[#0C507B]">
           <div class="flex gap-3">
             <div class="relative">
-              <div class="w-60"><img src="./2.png" alt="TIK-REX" /></div>
+              <div class="w-60"><img src="/2.png" alt="TIK-REX" /></div>
             </div>
             <div class="text-black flex flex-col">
               <p class="text-[40px] leading-none font-varela">
@@ -75,9 +76,9 @@ export default function Home() {
                   <p class="text-2xl text-black mb-4 font-varela">
                     Interested in our Products?
                   </p>
-                  <button class="bg-[#004B87] hover:bg-[#003666] text-white font-bold py-6 px-12 rounded-lg text-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <A href="/items" class="bg-[#004B87] hover:bg-[#003666] text-white font-bold py-6 px-12 rounded-lg text-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     Check Products
-                  </button>
+                  </A>
                 </div>
                 <div class="text-center">
                   <span class="inline-block bg-[#260F26] text-white px-10 py-4 rounded-xl text-2xl font-varela font-bold mb-6">

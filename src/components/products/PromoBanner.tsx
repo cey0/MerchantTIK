@@ -1,31 +1,21 @@
 export default function PromoBanner() {
   return (
-    <div class="bg-[#0F305D] rounded-2xl p-8 mb-12 ml-[150px] mr-[50px] shadow-2xl">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="text-6xl font-bold text-white font-poppins mb-4 leading-tight">
+    <div class="bg-[#0F305D] rounded-2xl p-10 mb-12 shadow-2xl relative overflow-hidden">
+      <div class="flex items-center justify-between">
+        <div class="z-10">
+          <h2 class="text-5xl font-bold text-white font-poppins mb-6 leading-tight">
             Grab up to 20% off on
             <br />
-            Bundling Products
+            <span class="text-6xl">Bundling Products</span>
           </h2>
-          <p class="text-gray-300 text-lg mb-6 font-varela">
-            Discover exclusive merchandise designed for tech enthusiasts and alumni.
-          </p>
-          <button class="bg-gray-200 text-black px-10 py-3 rounded-xl font-bold font-varela text-lg hover:bg-white transition-colors shadow-lg">
+          <button class="bg-white text-[#0F305D] px-8 py-3 rounded-lg font-bold font-varela text-base hover:bg-gray-100 transition-colors shadow-lg">
             Buy Now
           </button>
         </div>
         <div class="relative">
-          <div class="grid grid-cols-3 gap-4">
-            <div class="backdrop-blur-sm">
-              <img src="/ultimate-bundle.png" alt="Ultimate Tech Squad Bundle" class="w-full h-full object-contain" />
-            </div>
-            <div class="blur-sm">
-              <img src="/hack-bundle.png" alt="Hack Mode Bundle" class="w-full h-full object-contain" />
-            </div>
-            <div class="blur-sm">
-              <img src="/hack-bundle.png" alt="Hack Mode Bundle" class="w-full h-full object-contain" />
-            </div>
+          <img src="/banner.png" alt="Bundling Pack" class="h-48 object-contain" />
+          <div class="absolute top-2 right-2 bg-white text-[#0F305D] px-3 py-1.5 rounded-md font-bold text-sm shadow-lg">
+            22-195K
           </div>
         </div>
       </div>

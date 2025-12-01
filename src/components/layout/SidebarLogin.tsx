@@ -19,7 +19,7 @@ export default function SidebarLogin() {
       
       {/* Logout Icon */}
       <A
-        href="/login" 
+        href="/auth/login" 
         class="text-gray-700 hover:text-red-600 transition-colors"
         title="Logout"
       >

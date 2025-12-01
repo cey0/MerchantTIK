@@ -18,10 +18,10 @@ export default function CardRegister() {
           </form>
         </div>
         <div class="button-register mt-2 flex flex-col justify-center items-center text-center text-white ">
-          <a href="" class="bg-[#3683D0] text-base w-full rounded-md py-2 my-3 hover:bg-[#1866b4]">Sign Up</a>
+          <a href="/home" class="bg-[#3683D0] text-base w-full rounded-md py-2 my-3 hover:bg-[#1866b4]">Sign Up</a>
         </div>
         <div class=" text-center text-sm">
-          Sudah punya akun? <a href="/login" class="italic hover:underline">Log in</a>
+          Sudah punya akun? <a href="/auth/login" class="italic hover:underline">Log in</a>
         </div>
       </div>
     </div>
