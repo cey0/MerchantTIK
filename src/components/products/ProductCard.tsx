@@ -1,11 +1,10 @@
-// Definisikan tipe untuk Product data
 interface Product {
     imageAlt: string;
     name: string;
     price: string;
     image?: string;
     rating?: number; // 0-5 stars
-    totalPriceBadge?: string; // e.g., "195K" for bundling cards
+    totalPriceBadge?: string;
 }
 
 interface ProductCardProps {
@@ -31,12 +30,13 @@ const CartIcon = (props: { alt: string }) => (
     </svg>
 );
 
-import Separator from "~/components/layout/Separator";
-
 export const ProductCard = (props: ProductCardProps) => {
     return (
         <div
-            class="w-[206px] h-[350px] bg-linear-to-b from-[#1B4A6E] to-[#0F305D] rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col"
+            class="w-[206px] h-[350px] bg-linear-to-b from-[#1B4A6E] to-[#0F305D] rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.35)] overflow-hidden flex flex-col transition-all duration-200 hover:shadow-[0_6px_16px_rgba(0,0,0,0.45)] hover:-translate-y-1 focus-within:shadow-[0_6px_16px_rgba(0,0,0,0.5)]"
+            tabindex="0"
+            role="group"
+            aria-label={props.product.name}
         >
             {/* Area Gambar Produk */}
             <div class="h-[238.5px] relative bg-[#0F305D]">
@@ -47,17 +47,11 @@ export const ProductCard = (props: ProductCardProps) => {
                         <img
                             src={props.product.image}
                             alt={props.product.imageAlt}
-                            class="w-full h-full object-contain"
+                            class="w-full h-full object-contain select-none"
                         />
                     ) : (
                         <div class="w-full h-full bg-gray-200/50 flex items-center justify-center">
                             <span class="text-sm text-gray-600">{props.product.imageAlt}</span>
-                        </div>
-                    )}
-                    {/* Price badge for bundling cards */}
-                    {props.product.totalPriceBadge && (
-                        <div class="absolute top-3 right-3 bg-white text-[#0F305D] px-2.5 py-1 rounded-md text-xs font-bold shadow-lg">
-                            {props.product.totalPriceBadge}
                         </div>
                     )}
                 </div>
@@ -65,11 +59,11 @@ export const ProductCard = (props: ProductCardProps) => {
 
             {/* Detail Produk */}
             <div
-                class="bg-white h-[112.5px] rounded-b-2xl p-3 flex flex-col justify-between"
+                class="bg-white h-[112.5px] rounded-b-lg p-3 flex flex-col justify-between"
             >
                 <div>
                     <h3
-                        class="text-left text-black font-varela text-[15px] font-bold truncate"
+                        class="text-left text-black font-varela text-[15px] font-bold truncate group-hover:text-[#0F305D] transition-colors"
                     >
                         {props.product.name}
                     </h3>
@@ -79,26 +73,24 @@ export const ProductCard = (props: ProductCardProps) => {
                         {props.product.price}
                     </p>
                     {/* Rating stars */}
-                    <div class="mt-1 flex items-center gap-1">
-                        {Array.from({ length: Math.min(5, props.product.rating ?? 5) }).map(() => (
-                            <svg class="w-3.5 h-3.5 text-yellow-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                    <div class="mt-1 flex items-center gap-1" aria-label={`Rating ${props.product.rating ?? 5} of 5`}>
+                        {Array.from({ length: Math.min(5, props.product.rating ?? 5) }).map((_, i) => (
+                            <svg class="w-3.5 h-3.5 text-yellow-400 fill-current" viewBox="0 0 20 20" aria-hidden="true" data-index={i}>
                                 <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                             </svg>
                         ))}
                     </div>
                 </div>
-
-                {/* Separator dan Tombol Add to Cart */}
                 <div class="mt-2">
-                    <Separator class="my-1 bg-black/10" />
 
                     <button
-                        class="w-full h-6 bg-[#0F305D] rounded-md flex items-center justify-center space-x-2 transition-transform hover:scale-[1.02] shadow"
+                        class="w-full h-7 bg-[#0F305D] rounded-lg flex items-center justify-center space-x-2 transition-all hover:bg-[#124469] focus:outline-none focus:ring-2 focus:ring-[#0F305D]/50 shadow"
                         onClick={() => console.log('Add to cart clicked')}
+                        aria-label={`Add ${props.product.name} to cart`}
                     >
                         <CartIcon alt={props.cartIconAlt} />
                         <span
-                            class="text-white font-varela text-[10px] uppercase font-bold tracking-wide"
+                            class="text-white font-varela text-[11px] uppercase font-bold tracking-wide"
                         >
                             Add to Cart
                         </span>

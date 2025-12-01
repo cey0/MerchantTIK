@@ -1,13 +1,18 @@
+import { createSignal } from "solid-js";
+import { clientOnly } from "@solidjs/start";
 import Sidebar from "~/components/layout/Sidebar";
 import Footer from "~/components/layout/Footer";
 import PageHeader from "~/components/layout/PageHeader";
 import PromoBanner from "~/components/products/PromoBanner";
 import { ProductGrid } from "~/components/products/ProductGrid";
-import DiagonalLines from "~/components/decor/DiagonalLines";
 import BluePanel from "~/components/layout/BluePanel";
 import Separator from "~/components/layout/Separator";
+import DiagonalLines from "~/components/decor/DiagonalLines";
+
+const CartDrawer = clientOnly(() => import("~/components/cart/CartDrawer"));
 
 export default function ItemsPage() {
+  const [isCartOpen, setIsCartOpen] = createSignal(false);
   const bundles = [
     {
       imageAlt: "Ultimate Tech Squad",
@@ -91,37 +96,31 @@ export default function ItemsPage() {
 
   return (
     <div class="min-h-screen bg-linear-to-b from-white via-[#E4EBF3] to-[#0C507B] relative">
-      {/* Background Lines Section */}
-      <div class="absolute top-0 left-0 right-0 w-full h-[696px] overflow-hidden pointer-events-none">
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <DiagonalLines />
       </div>
       
       <Sidebar />
       
-      <main class="ml-[150px] mr-[50px] relative z-10">
+      <main class="ml-[150px] mr-[50px] relative z-10 pt-4 pb-16 space-y-8">
         <PageHeader />
         <PromoBanner />
         
-        {/* Most Popular Bundles Section */}
-        <div class="mb-12">
-          <BluePanel title="MOST POPULAR BUNDLES">
-            <Separator class="mb-6" />
-            <ProductGrid products={bundles} />
-            <Separator class="mt-6" />
-          </BluePanel>
-        </div>
-
-        {/* Our Best-Selling Products Section */}
-        <div class="mb-12">
-          <BluePanel title="OUR BEST-SELLING PRODUCTS">
-            <Separator class="mb-6" />
-            <ProductGrid products={products} />
-            <Separator class="mt-6" />
-          </BluePanel>
-        </div>
+        <BluePanel title="MOST POPULAR BUNDLES">
+          <Separator class="mb-6" />
+          <ProductGrid products={bundles} />
+          <Separator class="mt-6" />
+        </BluePanel>
+        
+        <BluePanel title="OUR BEST-SELLING PRODUCTS">
+          <Separator class="mb-6" />
+          <ProductGrid products={products} />
+          <Separator class="mt-6" />
+        </BluePanel>
       </main>
 
       <Footer />
+      <CartDrawer isOpen={isCartOpen()} onClose={() => setIsCartOpen(false)} />
     </div>
   );
 }
